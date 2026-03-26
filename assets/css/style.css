@@ -1,0 +1,410 @@
+/* CSS Reset simples para base mobile-first consistente */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img,
+svg,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+:root {
+  --color-background: #0f172a;
+  --color-primary-text: #f8fafc;
+  --color-accent: #38bdf8;
+  --color-surface: #1e293b;
+  --color-border: #334155;
+  --shadow-soft: 0 10px 24px rgba(0, 0, 0, 0.24);
+}
+
+body {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  line-height: 1.5;
+  background-color: var(--color-background);
+  color: var(--color-primary-text);
+}
+
+.page-content,
+.site-footer {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+/* Header com navegação sticky */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(15, 23, 42, 0.94);
+  backdrop-filter: blur(4px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.main-nav {
+  min-height: 4.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nav-button {
+  text-decoration: none;
+  color: var(--color-primary-text);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 0.55rem 1rem;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.nav-button:hover,
+.nav-button:focus-visible {
+  background-color: #273549;
+  transform: translateY(-2px);
+}
+
+.hero-section {
+  display: grid;
+  gap: 1.2rem;
+  padding: 2rem 0;
+}
+
+/* Coluna principal do hero: nome, descrição e contato */
+.hero-main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.identity-card,
+.about-wrapper,
+.skills-card,
+.cv-link-card,
+.email-display-card,
+.project-card-item,
+.contact-form {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  box-shadow: var(--shadow-soft);
+}
+
+.identity-card {
+  padding: 1.2rem;
+}
+
+.hero-greeting {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+}
+
+.hero-professional-title {
+  margin-top: 0.35rem;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: clamp(1.9rem, 8vw, 2.8rem);
+  line-height: 1.1;
+}
+
+.about-wrapper {
+  padding: 1.2rem;
+}
+
+.contact-actions-wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.copy-email-button {
+  position: relative;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background-color: var(--color-accent);
+  color: #04213a;
+  font-weight: 700;
+  padding: 0.8rem 0.95rem;
+  min-height: 3rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.copy-email-button:hover,
+.copy-email-button:focus-visible {
+  transform: scale(1.03) translateY(-1px);
+  filter: brightness(1.05);
+}
+
+/* Estado visual temporário após copiar o conteúdo */
+.copy-email-button.copied-state {
+  animation: pulseCopy 0.45s ease;
+}
+
+@keyframes pulseCopy {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.06);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.email-display-card {
+  padding: 0.8rem;
+  min-height: 3rem;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.email-display-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-accent);
+}
+
+/* Tooltip que acompanha o mouse sobre o botão de cópia */
+.copy-tooltip {
+  position: absolute;
+  pointer-events: none;
+  padding: 0.35rem 0.55rem;
+  border-radius: 8px;
+  background: #0b1222;
+  border: 1px solid var(--color-border);
+  font-size: 0.75rem;
+  opacity: 0;
+  transform: translate(-50%, -130%);
+  transition: opacity 0.15s ease;
+}
+
+.copy-tooltip.tooltip-visible {
+  opacity: 1;
+}
+
+.copy-feedback {
+  grid-column: 1 / -1;
+  min-height: 1.25rem;
+  font-size: 0.9rem;
+  color: #86efac;
+}
+
+.skills-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.skills-card {
+  padding: 1rem;
+}
+
+.skills-title {
+  margin-bottom: 0.9rem;
+}
+
+.skill-item + .skill-item {
+  margin-top: 0.9rem;
+}
+
+.skill-header-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.skill-name {
+  font-size: 0.95rem;
+}
+
+.skill-progress-track {
+  margin-top: 0.45rem;
+  height: 8px;
+  border-radius: 999px;
+  background-color: #0d1628;
+}
+
+.skill-progress-fill {
+  height: 100%;
+  border-radius: inherit;
+  background-color: var(--color-accent);
+}
+
+.level-80 { width: 80%; }
+.level-75 { width: 75%; }
+.level-70 { width: 70%; }
+.level-65 { width: 65%; }
+
+.cv-link-card {
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--color-primary-text);
+  padding: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: transform 0.2s ease;
+}
+
+/* Película sobre o card de CV ao passar o mouse */
+.cv-link-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 15%, rgba(56, 189, 248, 0.24), transparent 85%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.cv-link-card:hover::after,
+.cv-link-card:focus-visible::after {
+  opacity: 1;
+}
+
+.cv-link-card:hover,
+.cv-link-card:focus-visible {
+  transform: translateY(-2px);
+}
+
+.projects-section {
+  padding: 1rem 0 2rem;
+}
+
+.projects-heading {
+  margin-bottom: 1rem;
+}
+
+.projects-grid-layout {
+  display: grid;
+  gap: 1rem;
+}
+
+.project-card-item {
+  overflow: hidden;
+}
+
+.project-cover-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.project-content-area {
+  padding: 1rem;
+}
+
+.project-tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0.8rem 0 1rem;
+}
+
+.project-tech-tag {
+  border: 1px solid var(--color-border);
+  background-color: #0d1628;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  padding: 0.35rem 0.7rem;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.project-tech-tag:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-accent);
+}
+
+.project-view-button {
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  text-decoration: none;
+  background-color: var(--color-accent);
+  color: #04213a;
+  font-weight: 700;
+  padding: 0.72rem;
+  border-radius: 10px;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.project-view-button:hover,
+.project-view-button:focus-visible {
+  transform: translateY(-2px);
+  filter: brightness(1.06);
+}
+
+.project-view-button:active {
+  transform: scale(0.98);
+}
+
+.site-footer {
+  padding-bottom: 2rem;
+}
+
+.contact-section {
+  padding-top: 0.8rem;
+}
+
+.contact-title {
+  margin-bottom: 0.8rem;
+}
+
+.contact-form {
+  padding: 1rem;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.contact-label {
+  font-size: 0.9rem;
+}
+
+.contact-input,
+.contact-textarea {
+  background: #0d1628;
+  color: var(--color-primary-text);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 0.72rem;
+}
+
+.contact-submit-button {
+  margin-top: 0.25rem;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--color-accent);
+  color: #04213a;
+  font-weight: 700;
+  padding: 0.72rem;
+  cursor: pointer;
+}
+
+/* Desktop: descrição à esquerda e skills à direita com Grid */
+@media (min-width: 1024px) {
+  .hero-section {
+    grid-template-columns: 1.4fr 0.9fr;
+    align-items: start;
+    gap: 1.5rem;
+  }
+
+  .projects-grid-layout {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

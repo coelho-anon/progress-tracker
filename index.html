@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio | Thiago Silva</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header" id="home">
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a class="nav-button" href="#home">Home</a>
+        <a class="nav-button" href="#contact">Contact</a>
+        <a class="nav-button" href="#projects">Projects</a>
+      </nav>
+    </header>
+
+    <main class="page-content">
+      <section class="hero-section" aria-labelledby="hero-title">
+        <div class="hero-main-content">
+          <div class="identity-card">
+            <p class="hero-greeting">
+              👋 Olá, eu sou <strong>Thiago Silva</strong>
+            </p>
+            <h1 class="hero-professional-title" id="hero-title">
+              Desenvolvedor Front-end Júnior
+            </h1>
+          </div>
+
+          <div class="about-wrapper">
+            <p class="about-text">
+              Sou desenvolvedor focado em front-end, com experiência acadêmica e em
+              projetos pessoais. Estou em busca da primeira oportunidade profissional
+              para contribuir com interfaces responsivas, acessíveis e com código
+              limpo.
+            </p>
+          </div>
+
+          <div class="contact-actions-wrapper">
+            <button
+              class="copy-email-button"
+              id="copyEmailButton"
+              type="button"
+              aria-describedby="copyFeedback"
+            >
+              <span class="copy-button-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 9H5C4.44772 9 4 9.44772 4 10V19C4 19.5523 4.44772 20 5 20H14C14.5523 20 15 19.5523 15 19V15"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <rect
+                    x="9"
+                    y="4"
+                    width="11"
+                    height="11"
+                    rx="1"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                  />
+                </svg>
+              </span>
+              <span class="copy-button-label">Copiar e-mail</span>
+            </button>
+
+            <div class="email-display-card" aria-label="E-mail de contato">
+              thiago.silva@email.com
+            </div>
+
+            <div class="copy-tooltip" id="copyTooltip" role="tooltip">
+              Copiar e-mail
+            </div>
+
+            <p class="copy-feedback" id="copyFeedback" aria-live="polite"></p>
+          </div>
+        </div>
+
+        <aside class="skills-column" aria-label="Skills">
+          <section class="skills-card">
+            <h2 class="skills-title">Skills</h2>
+
+            <article class="skill-item">
+              <div class="skill-header-row">
+                <span class="skill-icon" aria-hidden="true">🎨</span>
+                <h3 class="skill-name">CSS - Advanced</h3>
+              </div>
+              <div class="skill-progress-track" aria-hidden="true">
+                <div class="skill-progress-fill level-80"></div>
+              </div>
+            </article>
+
+            <article class="skill-item">
+              <div class="skill-header-row">
+                <span class="skill-icon" aria-hidden="true">📄</span>
+                <h3 class="skill-name">HTML - Intermediate</h3>
+              </div>
+              <div class="skill-progress-track" aria-hidden="true">
+                <div class="skill-progress-fill level-75"></div>
+              </div>
+            </article>
+
+            <article class="skill-item">
+              <div class="skill-header-row">
+                <span class="skill-icon" aria-hidden="true">✨</span>
+                <h3 class="skill-name">JavaScript - Intermediate</h3>
+              </div>
+              <div class="skill-progress-track" aria-hidden="true">
+                <div class="skill-progress-fill level-70"></div>
+              </div>
+            </article>
+
+            <article class="skill-item">
+              <div class="skill-header-row">
+                <span class="skill-icon" aria-hidden="true">🟢</span>
+                <h3 class="skill-name">Node.js - Intermediate</h3>
+              </div>
+              <div class="skill-progress-track" aria-hidden="true">
+                <div class="skill-progress-fill level-65"></div>
+              </div>
+            </article>
+          </section>
+
+          <a class="cv-link-card" href="#" aria-label="Visualizar currículo em PDF">
+            <span class="cv-icon" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7 3H14L19 8V20C19 20.5523 18.5523 21 18 21H7C6.44772 21 6 20.5523 6 20V4C6 3.44772 6.44772 3 7 3Z"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linejoin="round"
+                />
+                <path d="M14 3V8H19" stroke="currentColor" stroke-width="1.8" />
+                <path
+                  d="M8.5 16.5H10.2C10.9727 16.5 11.6 15.8727 11.6 15.1V15.1C11.6 14.3273 10.9727 13.7 10.2 13.7H8.5V16.5Z"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M13 16.5V13.7H14.2C15.1941 13.7 16 14.5059 16 15.5V15.5C16 16.0523 15.5523 16.5 15 16.5H13Z"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+            <span class="cv-label">Visualizar CV</span>
+          </a>
+        </aside>
+      </section>
+
+      <section class="projects-section" id="projects" aria-labelledby="projects-title">
+        <h2 class="projects-heading" id="projects-title">Projetos</h2>
+
+        <div class="projects-grid-layout">
+          <article class="project-card-item">
+            <img
+              class="project-cover-image"
+              src="https://picsum.photos/seed/projeto-1/800/450"
+              alt="Prévia visual do Projeto 1"
+            />
+            <div class="project-content-area">
+              <h3 class="project-name">Projeto 1</h3>
+              <p class="project-description">
+                Aplicação responsiva para organização de tarefas com foco em
+                produtividade e usabilidade.
+              </p>
+              <div class="project-tech-tags" aria-label="Tecnologias usadas no projeto 1">
+                <span class="project-tech-tag">HTML</span>
+                <span class="project-tech-tag">CSS</span>
+                <span class="project-tech-tag">JavaScript</span>
+              </div>
+              <a class="project-view-button" href="https://example.com" target="_blank" rel="noopener noreferrer">Visualizar projeto</a>
+            </div>
+          </article>
+
+          <article class="project-card-item">
+            <img
+              class="project-cover-image"
+              src="https://picsum.photos/seed/projeto-2/800/450"
+              alt="Prévia visual do Projeto 2"
+            />
+            <div class="project-content-area">
+              <h3 class="project-name">Projeto 2</h3>
+              <p class="project-description">
+                Dashboard com indicadores de desempenho e interface adaptável para
+                diferentes tamanhos de tela.
+              </p>
+              <div class="project-tech-tags" aria-label="Tecnologias usadas no projeto 2">
+                <span class="project-tech-tag">HTML</span>
+                <span class="project-tech-tag">CSS</span>
+                <span class="project-tech-tag">Node.js</span>
+              </div>
+              <a class="project-view-button" href="https://example.com" target="_blank" rel="noopener noreferrer">Visualizar projeto</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <section class="contact-section" aria-labelledby="contact-title">
+        <h2 class="contact-title" id="contact-title">Contato</h2>
+        <form class="contact-form" action="#" method="post">
+          <label class="contact-label" for="recruiterEmail">E-mail</label>
+          <input
+            class="contact-input"
+            id="recruiterEmail"
+            name="email"
+            type="email"
+            placeholder="seuemail@empresa.com"
+            required
+          />
+
+          <label class="contact-label" for="recruiterMessage">Mensagem</label>
+          <textarea
+            class="contact-textarea"
+            id="recruiterMessage"
+            name="mensagem"
+            rows="5"
+            placeholder="Digite sua mensagem"
+            required
+          ></textarea>
+
+          <button class="contact-submit-button" type="submit">Enviar mensagem</button>
+        </form>
+      </section>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
